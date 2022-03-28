@@ -135,7 +135,7 @@ html {
 
 <video hideControls="false" autoplay controls crossorigin poster="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/SonySABlogo.png/185px-SonySABlogo.png" playsinline>
 
-    <source type="application/x-mpegURL" src="https://bit.ly/3fBsABhd"> </video>
+    <source type="application/x-mpegURL" src="https://hindi.ipl2022live.xyz/player/master.m3u8"> </video>
 </body>
 <script>
   setTimeout(videovisible, 4000)
