@@ -133,9 +133,9 @@ html {
 </div>
 </div>
 
-<video hideControls="false" autoplay controls crossorigin poster="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/SonySABlogo.png/185px-SonySABlogo.png" playsinline>
+<video hideControls="false" autoplay controls crossorigin poster="http://jiotv.catchup.cdn.jio.com/dare_images/images/<?php echo $_REQUEST["c"]; ?>.png" playsinline>
 
-    <source type="application/x-mpegURL" src="https://bit.ly/3fBsABhd"> </video>
+    <source type="application/x-mpegURL" src="autoq.php?c=<?php echo $_REQUEST["c"]; ?>"> </video>
 </body>
 <script>
   setTimeout(videovisible, 4000)
