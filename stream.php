@@ -1,0 +1,71 @@
+<?php
+
+$cont= 'http://rrjiotv.azurewebsites.net/token.php';
+$p= @file_get_contents($cont); 
+
+if(@$_REQUEST["key"]!="")
+{
+	$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => "User-Agent: JioTV\r\n" .
+		"lbcookie: 300\r\n" .
+"devicetype: phone\r\n" .
+"os: Android\r\n" .
+"appkey: NzNiMDhlYzQyNjJm\r\n" .
+"deviceId: 2f5f4c6443fe0800\r\n" .
+"versionCode: 226\r\n" .
+"osVersion: 9\r\n" .
+"isott: true\r\n" .
+"languageId: 6\r\n" .
+"uniqueId: c1464eef-ffcf-4f1a-a594-20dba25e8266\r\n" . 
+"srno: 200206173037\r\n" .
+"usergroup: tvYR7NSNn7rymo3F\r\n" .
+"channelid: 472\r\n" .
+"ssotoken: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWUiOiJjMTQ2NGVlZi1mZmNmLTRmMWEtYTU5NC0yMGRiYTI1ZTgyNjYiLCJ1c2VyVHlwZSI6IlJJTHBlcnNvbiIsImF1dGhMZXZlbCI6IjEwIiwiZGV2aWNlSWQiOm51bGwsImp0aSI6ImY4MGJjZDNlLTNlZDUtNGMwYS04ZTgwLWZmNGE3OGQzMWM3ZiIsImlhdCI6MTY0NjU1NjI3NX0.lBJ0f39G5BMcX70iBwuhrLaYCKtr7r1iQBN8xOmYbdQ\r\n" 
+	    
+    ]
+];
+
+
+$cache=str_replace("/","_",$_REQUEST["key"]);
+
+if(!file_exists($cache)){
+
+$context = stream_context_create($opts);
+$haystack = file_get_contents("https://tv.media.jio.com/streams_live/"  . $_REQUEST["key"] . $p,false,$context);
+
+}
+else
+{
+$haystack=file_get_contents($cache);
+
+}
+echo $haystack;
+}
+
+
+if(@$_REQUEST["ts"]!="")
+{
+header("Content-Type: video/mp2t");
+header("Connection: keep-alive");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Expose-Headers: Content-Length,Content-Range");
+header("Access-Control-Allow-Headers: Range");
+header("Accept-Ranges: bytes");
+	$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => "User-Agent: plaYtv/5.3.2 (Linux;Android 5.1.1) ExoPlayerLib/2.3.0/2.3.0\r\n" 
+
+
+    ]
+];
+
+$context = stream_context_create($opts);
+$haystack = file_get_contents("http://mumsite.cdnsrv.jio.com/jiotv.live.cdn.jio.com/"  . $_REQUEST["ts"],false,$context);
+echo $haystack;
+
+}
+
+?>
