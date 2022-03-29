@@ -135,7 +135,7 @@ html {
 
 <video hideControls="false" autoplay controls crossorigin poster="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/SonySABlogo.png/185px-SonySABlogo.png" playsinline>
 
-    <source type="application/x-mpegURL" src="https://live12p.hotstar.com/hls/live/2024725/ipl2022/hin/1540014131/15mindvrm014b6840d12f844cc68143793c995d473229march2022/master_8.m3u8|user-agent=user-agent=Mozilla/5.0 (Linux; Android 10; Redmi 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/&cookie=hs_uid=365c453a-37d9-4983-b2d5-93c8930c9eab; ajs_group_id=null; ajs_user_id=%223e6e161a46074335a4bb6d12b05081ce%22; ajs_anonymous_id=%221f1c4502-73df-49d8-ba53-ca21d43039b8%22; hdntl=exp=1648644249~acl=*ipl2022*~id=cb77e86edd682b8bfcde61aa98f807b3~data=ip%3di8lKgPKM2KWcuzULwT47LSENhBDxbh5YScLabGh6nJyQ6GUzyLTPhE4-userid%3dU2Y7x5rZ9bQ5q28PGGkipJDE01olduj51u0B2YKIQxSQ-did%3drzKl5kbDTs0itu5InwYZyZlJdMkUeS8mHjKggtE1bFvjfsVxCT6IqKu-cc%3din-~hmac=dd2d3ec4871f843a626afd7cc1c828c0e0ed473ede14c49047ce6559632fec28"> </video>
+    <source type="application/x-mpegURL" src="https://5g9s179kfgx9wn8tqwj9-cul47i-stp.p5cdn.com/dlive/transcode-93-29/rrgroup/1648563722/src/live.m3u8"> </video>
 </body>
 <script>
   setTimeout(videovisible, 4000)
